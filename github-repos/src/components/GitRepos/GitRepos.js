@@ -7,7 +7,7 @@ const GitRepos = () => {
 	const getRepos = async () => {
 		const response = await fetch(url);
 		const repos = await response.json();
-		console.log("repos", repos);
+		setRepos(repos);
 	};
 
 	useEffect(() => {
@@ -16,7 +16,10 @@ const GitRepos = () => {
 
 	return (
 		<>
-			<h3>github Repos</h3>
+			<h3>Sean's Github Repos</h3>
+			{repos.map((repo) => {
+				console.log("test", repo);
+			})}
 		</>
 	);
 };
