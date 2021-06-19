@@ -1,0 +1,10 @@
+.repo-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	li {
+		width: 33.333%;
+		@media screen and (max-width: 680px) {
+			width: 100%;
+		}
+	}
+}

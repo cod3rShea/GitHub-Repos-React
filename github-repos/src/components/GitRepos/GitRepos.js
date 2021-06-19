@@ -16,8 +16,8 @@ const GitRepos = () => {
 
 	return (
 		<>
-			<h3>Sean's Github Repos</h3>
-			<ul>
+			<h1>Sean's Github Repos</h1>
+			<ul className="repo-wrapper">
 				{repos.map((repo) => {
 					console.log(repo);
 					const { id, url, name, language, description } = repo;
