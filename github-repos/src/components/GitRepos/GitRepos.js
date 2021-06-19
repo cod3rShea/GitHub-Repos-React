@@ -17,10 +17,22 @@ const GitRepos = () => {
 	return (
 		<>
 			<h3>Sean's Github Repos</h3>
-			{repos.map((repo) => {
-				const { url, name, language, description } = repo;
-				console.log("test", repo);
-			})}
+			<ul>
+				{repos.map((repo) => {
+					console.log(repo);
+					const { id, url, name, language, description } = repo;
+					return (
+						<li key={id}>
+							<div>
+								<h2>{name}</h2>
+								<a href={url}>View repository</a>
+								<p>{description}</p>
+								<span>{language}</span>
+							</div>
+						</li>
+					);
+				})}
+			</ul>
 		</>
 	);
 };
