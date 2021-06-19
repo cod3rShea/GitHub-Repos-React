@@ -18,6 +18,7 @@ const GitRepos = () => {
 		<>
 			<h3>Sean's Github Repos</h3>
 			{repos.map((repo) => {
+				const { url, name, language, description } = repo;
 				console.log("test", repo);
 			})}
 		</>
